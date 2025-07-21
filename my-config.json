@@ -1,0 +1,17 @@
+{
+    "db_url": "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.3",
+    "db_design" : {
+        "User" : [
+            "Username","Password","Email"
+        ],
+        "Movie" : [
+            "title","staring", "release_date"
+        ],
+        "Theater" : [
+            "name", ["movie1","movie2"], "seats"
+        ],
+        "Ticket" : [
+            "seat_num", "user_id", "theater_id", "movie_id"
+        ]
+    }
+}
